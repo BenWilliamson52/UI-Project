@@ -3,7 +3,7 @@ var canvas = document.getElementById("canvas");
 // get 2D context for this canvas
 var context = canvas.getContext("2d");
 
-
+//
 
 var enemyHealth = 3;
 var playerHealth = 3;
