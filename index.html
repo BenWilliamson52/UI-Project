@@ -9,6 +9,8 @@
 
 <style type = text/css>
 
+
+
 body {
 width: 100%;
 height: 100%;
@@ -20,19 +22,18 @@ touch-action: manipulation;
 }
 
 
-
-
 </style>
-
 </head>
-<body>
+
+<body onload="playMusic()">
+
 
 <!-- canvas -->
 <canvas id="canvas" style='border: 3px solid; position:absolute; top:0%; left:0%; width:100%; height: 100%;'>
 </canvas>
 
 <!-- table for buttons -->
-<table style='position:absolute; top:80%; left: 45%;'>
+<table style='position:absolute; top:80%; left: 35%;'>
     <tbody>
         <tr>
             <td><button onclick="counterAttack()" class="button2" id="counterButton">COUNTER</button></td>

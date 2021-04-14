@@ -1,14 +1,48 @@
 #punchButton{
-background-color: blue;  
-color: mintcream;
-}
-
-#counterButton{
-    background-color: maroon;
+    font-family: monospace;
+    font-size: 20px;
+    background-color: #008fb3;  
     color: mintcream;
-}
+    border-radius:10px;
+    outline: none;
+    padding: 15px 60px;
+    }
+    
+    #counterButton{
+        font-family: monospace;
+        font-size: 20px;
+        background-color: maroon;
+        color: mintcream;
+        border-radius:10px;
+        outline: none;
+        padding: 15px 60px;
+    }
+    
+    #biteButton{
+    font-family: monospace;
+    font-size: 20px;
+    background-color: indigo;
+    color: mintcream;
+    border-radius:10px;
+    outline: none;
+    padding: 15px 60px;
+    }
+    
+    
+    #punchButton:active {
+        background-color: #0099ff;
+        box-shadow: 0 3px #666;
+        transform: translateY(4px);
+    }
+    
+    #counterButton:active {
+        background-color: #e60000;
+        box-shadow: 0 3px #666;
+        transform: translateY(4px);
+    }
 
-#biteButton{
-background-color: indigo;
-color: mintcream;
-}
+    #biteButton:active {
+        background-color: #5900b3;
+        box-shadow: 0 3px #666;
+        transform: translateY(4px);
+    }

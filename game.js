@@ -5,6 +5,9 @@ var context = canvas.getContext("2d");
 
 //
 
+var music;
+
+
 var enemyHealth = 3;
 var playerHealth = 3;
 
@@ -17,12 +20,12 @@ function drawHealthbarEnemy() {
   //Background
   context.fillStyle = "#000000";
   context.clearRect(0, 0, width, height);
-  context.fillRect(110, 20, width, height);
+  context.fillRect(140, 20, width, height);
 
   //Fill
-  context.fillStyle = "#00FF00";
+  context.fillStyle = "#e60000";
   var fillVal = Math.min(Math.max(val / max, 0), 1);
-  context.fillRect(110, 20, fillVal * width, height);
+  context.fillRect(140, 20, fillVal * width, height);
 }
 
 function drawHealthbarPlayer() {
@@ -34,12 +37,12 @@ function drawHealthbarPlayer() {
     //Background
     context.fillStyle = "#000000";
     context.clearRect(0, 0, width, height);
-    context.fillRect(130, 100, width, height);
+    context.fillRect(110, 100, width, height);
   
     //Fill
     context.fillStyle = "#00FF00";
     var fillVal = Math.min(Math.max(val / max, 0), 1);
-    context.fillRect(130, 100, fillVal * width, height);
+    context.fillRect(110, 100, fillVal * width, height);
   }
 
 
@@ -62,8 +65,8 @@ function draw() {
 }
     // Draw player
 function animate() {
-    context.drawImage(enSprite, 200,20,60,60)
-    context.drawImage(sprite, 45, 65, 80, 80);
+    context.drawImage(enSprite, 220,20,60,60)
+    context.drawImage(sprite, 15, 65, 80, 80);
     drawHealthbarEnemy();
     drawHealthbarPlayer();
 }
@@ -106,10 +109,13 @@ function enemyAttack(){
     if(random == 3 && move == 3){playerHealth -=0}
 }
 
-
+function playMusic()
+{
+music = new sound("bgmusic.mp3");
+music.play();
+}
 
 function gameloop() {
-    
     update();
     draw();
     window.requestAnimationFrame(gameloop);
