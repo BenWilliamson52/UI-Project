@@ -3,12 +3,11 @@
 <head>
 
 <link rel="stylesheet" href="game.css">
-    
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 
 
 <style type = text/css>
-
 
 
 body {
@@ -24,26 +23,40 @@ touch-action: manipulation;
 
 </style>
 </head>
+<body>
 
-<body onload="playMusic()">
+
+
+
+    <p id="showPara" class="hidden"> placeholder </p>
+
 
 
 <!-- canvas -->
-<canvas id="canvas" style='border: 3px solid; position:absolute; top:0%; left:0%; width:100%; height: 100%;'>
+<canvas id="canvas" style="border: 3px solid; position:absolute; top:0%; left:0%; width:100%; height: 100%; z-index: 0 ;">
+
 </canvas>
+<button onclick="showFor3()" class="hidden"> show / hide </button>
 
 <!-- table for buttons -->
 <table style='position:absolute; top:80%; left: 35%;'>
     <tbody>
         <tr>
-            <td><button onclick="counterAttack()" class="button2" id="counterButton">COUNTER</button></td>
+            <td><button onclick="counterAttack(); showFor3();" class="button2" id="counterButton">KICK</button></td>
             <td>&nbsp;</td><td>&nbsp;</td>
-            <td><button onclick="punchAttack()" class="button1" id="punchButton"><span>PUNCH</span></button></td>
+            <td><button onclick="punchAttack();  showFor3();" class="button1" id="punchButton"><span>PUNCH</span></button></td>
             <td>&nbsp;</td><td>&nbsp;</td>
-            <td><button onclick="biteAttack()" class="button3" id="biteButton">BITE</button></td>
+            <td><button onclick="biteAttack();  showFor3();" class="button3" id="biteButton">BITE</button></td>
+            <td><button onclick="showFor3()" class="hidden">SHOW HIDE</button></td>
         </tr>
 </tbody>
 </table>
+
+
+
+
+
+
 </body>
 
 

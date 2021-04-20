@@ -57,10 +57,10 @@ enSprite.src = "./front.png";
 
 // Updates
 function update() {
-    console.log("Update ...");
+//    console.log("Update ...");
 }
 function draw() {
-    console.log("Draw");
+ //   console.log("Draw");
    animate();
 }
     // Draw player
@@ -96,7 +96,11 @@ function enemyAttack(){
 
     var random = Math.floor(Math.random() * 3) + 1;
     
-    if (random == 1 && move == 1){playerHealth -= 0}
+    if (random == 1 && move == 1){
+        
+        playerHealth -= 0; 
+        document.getElementById("showPara".innerHTML="no damage insued");}
+
     if (random == 1 && move == 2){playerHealth -= 1}
     if (random == 1 && move == 3){enemyHealth -= 1}
 
@@ -109,11 +113,38 @@ function enemyAttack(){
     if(random == 3 && move == 3){playerHealth -=0}
 }
 
-function playMusic()
+
+var showing;
+function showHide()
 {
-music = new sound("bgmusic.mp3");
-music.play();
+    if(showing==1)
+    {
+        document.getElementById("showPara").style.display="inline";
+        return showing=0;
+    }
+
+    else{
+        document.getElementById("showPara").style.display="none";
+        return showing=1;
+    }
 }
+
+
+function showFor3()
+{
+
+    if( document.getElementById("showPara").style.visibility="hidden")
+    {
+        console.log("showPara");
+
+        document.getElementById("showPara").style.visibility="visible";
+        setTimeout(function(){document.getElementById("showPara").style.visibility="hidden";         console.log("hiding para");     }, 3000 );
+
+    
+    }
+
+}
+
 
 function gameloop() {
     update();
