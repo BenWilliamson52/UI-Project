@@ -23,7 +23,7 @@
     #biteButton{
     font-family: monospace;
     font-size: 20px;
-    background-color: indigo;
+    background-color:sandybrown;
     color: mintcream;
     border-radius:10px;
     border-color: black;
@@ -70,4 +70,12 @@
 
     #showPara{
         visibility: hidden;
+        left: 35%;
+        top:40%;
+
+        font-family: monospace;
+        font-size: 20px;
+        background-color: blanchedalmond;
+        border-radius: 6px;
+
     }

@@ -96,21 +96,17 @@ function enemyAttack(){
 
     var random = Math.floor(Math.random() * 3) + 1;
     
-    if (random == 1 && move == 1){
-        
-        playerHealth -= 0; 
-        document.getElementById("showPara".innerHTML="no damage insued");}
+    if (random == 1 && move == 1){playerHealth -= 0;    document.getElementById("showPara").innerHTML="both moves identical, no damage taken";}
+    if (random == 1 && move == 2){playerHealth -= 1;    document.getElementById("showPara").innerHTML="enemies attack won, you lost health";}
+    if (random == 1 && move == 3){enemyHealth -= 1;     document.getElementById("showPara").innerHTML="your attack won, enemy lost health";}
 
-    if (random == 1 && move == 2){playerHealth -= 1}
-    if (random == 1 && move == 3){enemyHealth -= 1}
+    if(random == 2 && move == 1){enemyHealth -= 1;      document.getElementById("showPara").innerHTML="your attack won, enemy lost health";}
+    if(random == 2 && move == 2){playerHealth -= 0;     document.getElementById("showPara").innerHTML="both moves identical, no damage taken";}
+    if(random == 2 && move == 3){playerHealth -= 1;     document.getElementById("showPara").innerHTML="enemies attack won, you lost health";}
 
-    if(random == 2 && move == 1){enemyHealth -= 1}
-    if(random == 2 && move == 2){playerHealth -= 0}
-    if(random == 2 && move == 3){playerHealth -= 1}
-
-    if(random == 3 && move == 1){playerHealth -= 1}
-    if(random == 3 && move == 2){enemyHealth -= 1}
-    if(random == 3 && move == 3){playerHealth -=0}
+    if(random == 3 && move == 1){playerHealth -= 1;     document.getElementById("showPara").innerHTML="enemies attack won, you lost health";}
+    if(random == 3 && move == 2){enemyHealth -= 1;      document.getElementById("showPara").innerHTML="your attack won, enemy lost health";}
+    if(random == 3 && move == 3){playerHealth -=0 ;     document.getElementById("showPara").innerHTML="both moves identical, no damage taken";}
 }
 
 
