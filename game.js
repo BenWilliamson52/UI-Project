@@ -49,10 +49,10 @@ function drawHealthbarPlayer() {
 
 // player image
 var sprite = new Image();
-sprite.src = "./back.png"; 
+sprite.src = "./images/player1.png"; 
 // enemy image
 var enSprite = new Image();
-enSprite.src = "./front.png";
+enSprite.src = "./images/enemy1.png";
 
 
 // Updates
@@ -65,8 +65,8 @@ function draw() {
 }
     // Draw player
 function animate() {
-    context.drawImage(enSprite, 220,20,60,60)
-    context.drawImage(sprite, 15, 65, 80, 80);
+    context.drawImage(enSprite, 200,20,100,90)
+    context.drawImage(sprite, -40, 35, 180, 130);
     drawHealthbarEnemy();
     drawHealthbarPlayer();
 }
