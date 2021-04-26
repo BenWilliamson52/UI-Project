@@ -3,7 +3,14 @@ var canvas = document.getElementById("canvas");
 // get 2D context for this canvas
 var context = canvas.getContext("2d");
 
-//
+window.onload = () => {
+    'use strict';
+  
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+               .register('./service_worker.js');
+    }
+  }
 
 var music;
 

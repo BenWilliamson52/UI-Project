@@ -1,71 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<link rel="stylesheet" href="game.css">
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-
-
-<style type = text/css>
-
-
-body {
-width: 100%;
-height: 100%;
-margin: 0 0 0 0;
-padding: 0 0 0 0;
-overflow: hidden;
--ms-touch-action: manipulation;
-touch-action: manipulation;
-background-image: url("fightBg.png");
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-
-</style>
+<title> FIght game, gamertag page</title>
 </head>
 <body>
+<script src="./register.js"></script>
+<script src="./game.js"></script>
+  
+<form action="./game.html" method="GET" target="_blank">
 
+<input type="text" name="gamertag" value="">
 
-    <audio controls pause autoplay>
-        <source src="./sounds/bgmusic.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
+<button type="submit">Submit gamertag and enter game</button>
 
-    <p id="showPara" class="hidden"> placeholder </p>
-
-
-
-<!-- canvas -->
-<canvas id="canvas" style="border: 3px solid; position:absolute; top:0%; left:0%; width:100%; height: 100%; z-index: 0 ;">
-
-</canvas>
-<!-- <button onclick="showFor3()" class="hidden"> show / hide </button> -->
-
-<!-- table for buttons -->
-<table style='position:absolute; top:80%; left: 35%;'>
-    <tbody>
-        <tr>
-            <td><button onclick="counterAttack(); showFor3();" class="button2" id="counterButton"> 
-            <img src="./images/kick.png" width="100px" height="100px"></img> </button></td>
-            <td>&nbsp;</td><td>&nbsp;</td>
-            <td><button onclick="punchAttack();  showFor3();" class="button1" id="punchButton">PUNCH</button></td>
-            <td>&nbsp;</td><td>&nbsp;</td>
-            <td><button onclick="biteAttack();  showFor3();" class="button3" id="biteButton">BITE</button></td>
-        </tr>
-</tbody>
-</table>
-
-
-
-
-
+</form>
 
 </body>
-
-
-<script src="game.js"></script>
-
 </html>
