@@ -65,6 +65,15 @@ enSprite.src = "./images/enemy1.png";
 // Updates
 function update() {
 //    console.log("Update ...");
+
+if (playerHealth == 0){
+
+    alert("you lose !!!")
+}
+if (enemyHealth == 0){
+    alert("you win!!!")
+}
+
 }
 function draw() {
  //   console.log("Draw");
